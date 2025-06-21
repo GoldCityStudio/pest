@@ -1,0 +1,27 @@
+{
+  "name": "Dr Pest Control Company Ltd",
+  "short_name": "Dr Pest Control",
+  "description": "專業綠色滅蟲服務 - Professional Green Pest Control Services",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#4CAF50",
+  "theme_color": "#4CAF50",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/192x192/4CAF50/FFFFFF?text=Dr+Pest",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://via.placeholder.com/512x512/4CAF50/FFFFFF?text=Dr+Pest",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "home", "lifestyle"],
+  "lang": "zh-Hant",
+  "dir": "ltr"
+} 
