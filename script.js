@@ -6,17 +6,81 @@ document.addEventListener('DOMContentLoaded', function() {
     if (mobileMenuToggle && navMenu) {
         mobileMenuToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
+            this.classList.toggle('active');
             
             // Animate hamburger menu
-            const spans = this.querySelectorAll('span');
+            const spans = this.querySelectorAll('.hamburger-line');
             spans.forEach(span => span.classList.toggle('active'));
+            
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
         });
     }
     
     // Close mobile menu when clicking outside
     document.addEventListener('click', function(event) {
         if (!event.target.closest('.nav-wrapper')) {
-            navMenu.classList.remove('active');
+            if (navMenu && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                if (mobileMenuToggle) {
+                    mobileMenuToggle.classList.remove('active');
+                    const spans = mobileMenuToggle.querySelectorAll('.hamburger-line');
+                    spans.forEach(span => span.classList.remove('active'));
+                }
+                document.body.style.overflow = '';
+            }
+        }
+    });
+    
+    // Enhanced dropdown functionality for mobile
+    const dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(dropdown => {
+        const dropdownLink = dropdown.querySelector('a');
+        const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+        
+        if (dropdownLink && dropdownMenu) {
+            dropdownLink.addEventListener('click', function(e) {
+                // If it's a link to another page, don't prevent default
+                if (this.getAttribute('href') && !this.getAttribute('href').startsWith('#')) {
+                    return; // Allow normal navigation
+                }
+                
+                e.preventDefault();
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                
+                // Close all other dropdowns
+                dropdowns.forEach(otherDropdown => {
+                    if (otherDropdown !== dropdown) {
+                        const otherLink = otherDropdown.querySelector('a');
+                        const otherMenu = otherDropdown.querySelector('.dropdown-menu');
+                        if (otherLink && otherMenu) {
+                            otherLink.setAttribute('aria-expanded', 'false');
+                            otherDropdown.classList.remove('active');
+                            otherMenu.style.display = 'none';
+                        }
+                    }
+                });
+                
+                // Toggle current dropdown
+                this.setAttribute('aria-expanded', !isExpanded);
+                dropdown.classList.toggle('active');
+                dropdownMenu.style.display = isExpanded ? 'none' : 'block';
+                
+                // Add smooth animation for mobile dropdowns
+                if (window.innerWidth <= 768) {
+                    if (!isExpanded) {
+                        dropdownMenu.style.maxHeight = '0';
+                        dropdownMenu.style.overflow = 'hidden';
+                        dropdownMenu.style.transition = 'max-height 0.3s ease';
+                        
+                        setTimeout(() => {
+                            dropdownMenu.style.maxHeight = dropdownMenu.scrollHeight + 'px';
+                        }, 10);
+                    } else {
+                        dropdownMenu.style.maxHeight = '0';
+                    }
+                }
+            });
         }
     });
     
@@ -38,10 +102,109 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
                 
                 // Close mobile menu after clicking a link
-                navMenu.classList.remove('active');
+                if (navMenu) {
+                    navMenu.classList.remove('active');
+                    if (mobileMenuToggle) {
+                        mobileMenuToggle.classList.remove('active');
+                        const spans = mobileMenuToggle.querySelectorAll('.hamburger-line');
+                        spans.forEach(span => span.classList.remove('active'));
+                    }
+                    document.body.style.overflow = '';
+                }
             }
         });
     });
+    
+    // Enhanced navigation hover effects
+    const navItems = document.querySelectorAll('.nav-menu > li > a');
+    navItems.forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            // Add subtle scale effect
+            this.style.transform = 'translateY(-2px) scale(1.02)';
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            this.style.transform = '';
+        });
+    });
+    
+    // Professional dropdown hover effects
+    const dropdownItems = document.querySelectorAll('.dropdown-menu li a');
+    dropdownItems.forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            // Add professional hover effect
+            this.style.transform = 'translateX(5px)';
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            this.style.transform = '';
+        });
+    });
+    
+    // Keyboard navigation support
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            // Close mobile menu on Escape key
+            if (navMenu && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                if (mobileMenuToggle) {
+                    mobileMenuToggle.classList.remove('active');
+                    const spans = mobileMenuToggle.querySelectorAll('.hamburger-line');
+                    spans.forEach(span => span.classList.remove('active'));
+                }
+                document.body.style.overflow = '';
+            }
+        }
+    });
+    
+    // Add loading states to menu interactions
+    const menuLinks = document.querySelectorAll('.nav-menu a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            // Add subtle loading effect
+            this.style.opacity = '0.7';
+            this.style.transform = 'scale(0.95)';
+            
+            setTimeout(() => {
+                this.style.opacity = '';
+                this.style.transform = '';
+            }, 200);
+        });
+    });
+    
+    // Professional menu badge animations
+    const menuBadges = document.querySelectorAll('.menu-badge');
+    menuBadges.forEach(badge => {
+        badge.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.1)';
+            this.style.boxShadow = '0 2px 8px rgba(255, 255, 255, 0.3)';
+        });
+        
+        badge.addEventListener('mouseleave', function() {
+            this.style.transform = '';
+            this.style.boxShadow = '';
+        });
+    });
+    
+    // Enhanced mobile menu slide animation
+    if (navMenu) {
+        navMenu.addEventListener('transitionend', function() {
+            if (this.classList.contains('active')) {
+                // Add entrance animation to menu items
+                const menuItems = this.querySelectorAll('li');
+                menuItems.forEach((item, index) => {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateX(-20px)';
+                    
+                    setTimeout(() => {
+                        item.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateX(0)';
+                    }, index * 50);
+                });
+            }
+        });
+    }
     
     // Form handling
     const contactForm = document.querySelector('.contact-form form');
