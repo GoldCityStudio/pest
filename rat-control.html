@@ -8,6 +8,93 @@
   <meta name="keywords" content="老鼠滅蟲, Rat Control, 滅鼠服務, 百比除蟲, Babi Pest Control, 香港滅蟲, 專業滅鼠, 老鼠防治">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "老鼠滅蟲",
+    "provider": {
+      "@type": "Organization",
+      "name": "Babi Pest Control 百比除蟲"
+    },
+    "description": "專業可靠的老鼠滅蟲服務，徹底解決老鼠問題。",
+    "serviceType": "Pest Control",
+    "areaServed": {
+      "@type": "City",
+      "name": "Hong Kong"
+    },
+    "serviceOutput": "徹底解決老鼠問題",
+    "serviceAudience": {
+      "@type": "Audience",
+      "audienceType": "住宅和商業客戶"
+    },
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "serviceUrl": "https://babipestcontrol.com/contact.html",
+      "servicePhone": "+852-7017-3695"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "老鼠滅蟲服務",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "專業滅鼠技術",
+            "description": "使用先進技術徹底解決老鼠問題"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "安全環保",
+            "description": "採用環保安全的滅鼠方法"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "24小時服務",
+            "description": "提供24小時緊急滅鼠服務"
+          }
+        }
+      ]
+    }
+  }
+  </script>
+  
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "主頁",
+        "item": "https://babipestcontrol.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "滅蟲服務",
+        "item": "https://babipestcontrol.com/pest-control-services.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "老鼠滅蟲",
+        "item": "https://babipestcontrol.com/rat-control.html"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- Navigation -->
@@ -48,18 +135,5 @@
     </div>
     <div class="copyright">&copy; 2024 Babi Pest Control 百比除蟲</div>
   </footer>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "老鼠滅蟲",
-    "provider": {
-      "@type": "Organization",
-      "name": "Babi Pest Control 百比除蟲"
-    },
-    "description": "專業可靠的老鼠滅蟲服務，徹底解決老鼠問題。",
-    "serviceType": "Pest Control"
-  }
-  </script>
 </body>
 </html> 

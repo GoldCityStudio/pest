@@ -82,7 +82,7 @@
         "image": "https://babipestcontrol.com/images/hero-image.jpg",
         "telephone": "+852-7017-3695",
         "contactType": "customer service",
-        "availableLanguage": ["zh-Hant", "en"]
+        "availableLanguage": ["zh-Hant", "en"],
         "email": "info@babipestcontrol.com",
         "address": {
             "@type": "PostalAddress",
@@ -144,7 +144,21 @@
             "@type": "AggregateRating",
             "ratingValue": "4.8",
             "reviewCount": "150"
-        }
+        },
+        "foundingDate": "2004",
+        "numberOfEmployees": "50",
+        "award": [
+            "專業認證",
+            "環保認證",
+            "安全認證"
+        ],
+        "knowsAbout": [
+            "滅蟲服務",
+            "綠色滅蟲",
+            "環保滅蟲",
+            "香港滅蟲",
+            "專業滅蟲"
+        ]
     }
     </script>
     
@@ -165,6 +179,64 @@
         },
         "serviceType": "Pest Control",
         "category": "Home Improvement"
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "主頁",
+                "item": "https://babipestcontrol.com/"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Babi Pest Control提供哪些滅蟲服務？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "我們提供全面的滅蟲服務，包括老鼠滅蟲、曱甴滅蟲、蚊滅蟲、床蝨滅蟲、白蟻防治等，涵蓋家居和商業環境。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "滅蟲服務是否環保安全？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "是的，我們使用綠色環保的滅蟲方法，採用物理防治和低毒性藥劑，確保對人體和環境安全。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "服務範圍包括哪些地區？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "我們服務全香港，包括港島、九龍、新界等地區，提供24/7緊急滅蟲服務。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "滅蟲服務收費如何？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "我們提供免費上門檢查和報價，收費透明合理，歡迎使用政府採購卡付款。"
+                }
+            }
+        ]
     }
     </script>
 </head>

@@ -1,0 +1,38 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://babipestcontrol.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Allow all important directories
+Allow: /images/
+Allow: /css/
+Allow: /js/
+
+# Disallow any potential admin or private areas (if they exist)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /backup/
+
+# Allow all HTML pages
+Allow: /*.html
+
+# Specific directives for search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block any potential security files
+Disallow: /.htaccess
+Disallow: /web.config
+Disallow: /robots.txt
+Disallow: /sitemap.xml 
