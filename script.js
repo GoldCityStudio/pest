@@ -172,6 +172,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Ensure blog links work properly
+    const blogLinks = document.querySelectorAll('.blog-card a, .blog-content a');
+    blogLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Ensure normal navigation for blog links
+            if (this.getAttribute('href') && !this.getAttribute('href').startsWith('#')) {
+                // Allow normal navigation
+                return;
+            }
+        });
+        
+        // Force pointer events and cursor
+        link.style.pointerEvents = 'auto';
+        link.style.cursor = 'pointer';
+        link.style.zIndex = '10';
+        link.style.position = 'relative';
+    });
+    
     // Professional menu badge animations
     const menuBadges = document.querySelectorAll('.menu-badge');
     menuBadges.forEach(badge => {
@@ -198,13 +216,73 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     setTimeout(() => {
                         item.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                    }, index * 50);
+                    
+                    setTimeout(() => {
                         item.style.opacity = '1';
                         item.style.transform = 'translateX(0)';
-                    }, index * 50);
+                    }, index * 50 + 100);
                 });
             }
         });
     }
+    
+    // FAQ Toggle Functionality
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        const toggle = item.querySelector('.faq-toggle');
+        
+        if (question && answer && toggle) {
+            question.addEventListener('click', function() {
+                const isActive = answer.classList.contains('active');
+                
+                // Close all other FAQ items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        const otherAnswer = otherItem.querySelector('.faq-answer');
+                        const otherToggle = otherItem.querySelector('.faq-toggle');
+                        if (otherAnswer && otherToggle) {
+                            otherAnswer.classList.remove('active');
+                            otherToggle.classList.remove('active');
+                        }
+                    }
+                });
+                
+                // Toggle current FAQ item
+                answer.classList.toggle('active');
+                toggle.classList.toggle('active');
+                
+                // Add smooth scroll to answer if opening
+                if (!isActive) {
+                    setTimeout(() => {
+                        answer.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'nearest'
+                        });
+                    }, 300);
+                }
+            });
+            
+            // Keyboard accessibility for FAQ
+            question.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.click();
+                }
+            });
+            
+            // Add hover effect for FAQ questions
+            question.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+            });
+            
+            question.addEventListener('mouseleave', function() {
+                this.style.transform = '';
+            });
+        }
+    });
     
     // Form handling
     const contactForm = document.querySelector('.contact-form form');

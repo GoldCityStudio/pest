@@ -2,113 +2,136 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Main Pages -->
   <url>
-    <loc>https://babipestcontrol.com/</loc>
+    <loc>https://pest-sigma.vercel.app/</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/about.html</loc>
+    <loc>https://pest-sigma.vercel.app/about.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/contact.html</loc>
+    <loc>https://pest-sigma.vercel.app/contact.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
+  <!-- Blog Index -->
+  <url>
+    <loc>https://pest-sigma.vercel.app/blog/</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://pest-sigma.vercel.app/blog/rat-control-faq.html</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://pest-sigma.vercel.app/blog/rat-control-tips.html</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
   <!-- Pest Control Services -->
   <url>
-    <loc>https://babipestcontrol.com/pest-control-services.html</loc>
+    <loc>https://pest-sigma.vercel.app/pest-control-services.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/rat-control.html</loc>
+    <loc>https://pest-sigma.vercel.app/rat-control.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/cockroach-control.html</loc>
+    <loc>https://pest-sigma.vercel.app/cockroach-control.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/mosquito-control.html</loc>
+    <loc>https://pest-sigma.vercel.app/mosquito-control.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/bedbug-control.html</loc>
+    <loc>https://pest-sigma.vercel.app/bedbug-control.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/ant-control.html</loc>
+    <loc>https://pest-sigma.vercel.app/ant-control.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/termite-control.html</loc>
+    <loc>https://pest-sigma.vercel.app/termite-control.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/green-pest-control.html</loc>
+    <loc>https://pest-sigma.vercel.app/green-pest-control.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/commercial-pest-control.html</loc>
+    <loc>https://pest-sigma.vercel.app/commercial-pest-control.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/home-pest-control.html</loc>
+    <loc>https://pest-sigma.vercel.app/home-pest-control.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/emergency-pest-control.html</loc>
+    <loc>https://pest-sigma.vercel.app/emergency-pest-control.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/mosquito-trap-service.html</loc>
+    <loc>https://pest-sigma.vercel.app/mosquito-trap-service.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/formaldehyde-removal-service.html</loc>
+    <loc>https://pest-sigma.vercel.app/formaldehyde-removal-service.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -116,63 +139,63 @@
   
   <!-- Disinfection Products -->
   <url>
-    <loc>https://babipestcontrol.com/disinfection-products.html</loc>
+    <loc>https://pest-sigma.vercel.app/disinfection-products.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/personal-disinfection.html</loc>
+    <loc>https://pest-sigma.vercel.app/personal-disinfection.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/formaldehyde-removal.html</loc>
+    <loc>https://pest-sigma.vercel.app/formaldehyde-removal.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/antibacterial-products.html</loc>
+    <loc>https://pest-sigma.vercel.app/antibacterial-products.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/disinfection-film.html</loc>
+    <loc>https://pest-sigma.vercel.app/disinfection-film.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/disinfection-machines.html</loc>
+    <loc>https://pest-sigma.vercel.app/disinfection-machines.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/deodorants.html</loc>
+    <loc>https://pest-sigma.vercel.app/deodorants.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/nebulizers.html</loc>
+    <loc>https://pest-sigma.vercel.app/nebulizers.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/cooling-fans.html</loc>
+    <loc>https://pest-sigma.vercel.app/cooling-fans.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -180,28 +203,28 @@
   
   <!-- Pest Control Products -->
   <url>
-    <loc>https://babipestcontrol.com/pest-control-products.html</loc>
+    <loc>https://pest-sigma.vercel.app/pest-control-products.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/mouse-traps.html</loc>
+    <loc>https://pest-sigma.vercel.app/mouse-traps.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/mouse-repellers.html</loc>
+    <loc>https://pest-sigma.vercel.app/mouse-repellers.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/mouse-glue.html</loc>
+    <loc>https://pest-sigma.vercel.app/mouse-glue.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -209,119 +232,119 @@
   
   <!-- Cleaning Products -->
   <url>
-    <loc>https://babipestcontrol.com/cleaning-products.html</loc>
+    <loc>https://pest-sigma.vercel.app/cleaning-products.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/home-cleaning.html</loc>
+    <loc>https://pest-sigma.vercel.app/home-cleaning.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/toilet-cleaning.html</loc>
+    <loc>https://pest-sigma.vercel.app/toilet-cleaning.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/bathroom-cleaning.html</loc>
+    <loc>https://pest-sigma.vercel.app/bathroom-cleaning.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/kitchen-cleaning.html</loc>
+    <loc>https://pest-sigma.vercel.app/kitchen-cleaning.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/furniture-cleaning.html</loc>
+    <loc>https://pest-sigma.vercel.app/furniture-cleaning.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/glass-cleaning.html</loc>
+    <loc>https://pest-sigma.vercel.app/glass-cleaning.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/renovation-cleaning.html</loc>
+    <loc>https://pest-sigma.vercel.app/renovation-cleaning.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/cleaning-brushes.html</loc>
+    <loc>https://pest-sigma.vercel.app/cleaning-brushes.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/mops-brooms.html</loc>
+    <loc>https://pest-sigma.vercel.app/mops-brooms.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/cleaning-cloths.html</loc>
+    <loc>https://pest-sigma.vercel.app/cleaning-cloths.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/cleaning-buckets.html</loc>
+    <loc>https://pest-sigma.vercel.app/cleaning-buckets.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/toilet-brush.html</loc>
+    <loc>https://pest-sigma.vercel.app/toilet-brush.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/toilet-deodorant.html</loc>
+    <loc>https://pest-sigma.vercel.app/toilet-deodorant.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/all-purpose-cleaner.html</loc>
+    <loc>https://pest-sigma.vercel.app/all-purpose-cleaner.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/multi-purpose-cleaner.html</loc>
+    <loc>https://pest-sigma.vercel.app/multi-purpose-cleaner.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/eco-friendly-cleaner.html</loc>
+    <loc>https://pest-sigma.vercel.app/eco-friendly-cleaner.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -329,105 +352,105 @@
   
   <!-- Honey Products -->
   <url>
-    <loc>https://babipestcontrol.com/honey-products.html</loc>
+    <loc>https://pest-sigma.vercel.app/honey-products.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/pure-honey.html</loc>
+    <loc>https://pest-sigma.vercel.app/pure-honey.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/organic-honey.html</loc>
+    <loc>https://pest-sigma.vercel.app/organic-honey.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/manuka-honey.html</loc>
+    <loc>https://pest-sigma.vercel.app/manuka-honey.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/acacia-honey.html</loc>
+    <loc>https://pest-sigma.vercel.app/acacia-honey.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/clover-honey.html</loc>
+    <loc>https://pest-sigma.vercel.app/clover-honey.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/eucalyptus-honey.html</loc>
+    <loc>https://pest-sigma.vercel.app/eucalyptus-honey.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/lavender-honey.html</loc>
+    <loc>https://pest-sigma.vercel.app/lavender-honey.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/wild-honey.html</loc>
+    <loc>https://pest-sigma.vercel.app/wild-honey.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/honey-tonic.html</loc>
+    <loc>https://pest-sigma.vercel.app/honey-tonic.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/honey-vitamins.html</loc>
+    <loc>https://pest-sigma.vercel.app/honey-vitamins.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/honey-supplements.html</loc>
+    <loc>https://pest-sigma.vercel.app/honey-supplements.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/honey-gift-bottles.html</loc>
+    <loc>https://pest-sigma.vercel.app/honey-gift-bottles.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/honey-gift-sets.html</loc>
+    <loc>https://pest-sigma.vercel.app/honey-gift-sets.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/honey-gift-baskets.html</loc>
+    <loc>https://pest-sigma.vercel.app/honey-gift-baskets.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -435,14 +458,14 @@
   
   <!-- Additional Services -->
   <url>
-    <loc>https://babipestcontrol.com/nano-disinfection.html</loc>
+    <loc>https://pest-sigma.vercel.app/nano-disinfection.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/online-shop.html</loc>
+    <loc>https://pest-sigma.vercel.app/online-shop.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -450,21 +473,21 @@
   
   <!-- Legal Pages -->
   <url>
-    <loc>https://babipestcontrol.com/privacy-policy.html</loc>
+    <loc>https://pest-sigma.vercel.app/privacy-policy.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/terms-of-service.html</loc>
+    <loc>https://pest-sigma.vercel.app/terms-of-service.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   
   <url>
-    <loc>https://babipestcontrol.com/sitemap.html</loc>
+    <loc>https://pest-sigma.vercel.app/sitemap.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>

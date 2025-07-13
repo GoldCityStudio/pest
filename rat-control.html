@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>老鼠滅蟲 | Babi Pest Control 百比除蟲</title>
-  <meta name="description" content="老鼠滅蟲服務，專業可靠。Babi Pest Control 百比除蟲提供專業老鼠滅蟲服務，徹底解決老鼠問題。">
-  <meta name="keywords" content="老鼠滅蟲, Rat Control, 滅鼠服務, 百比除蟲, Babi Pest Control, 香港滅蟲, 專業滅鼠, 老鼠防治">
+  <title>老鼠滅蟲服務 | 香港專業老鼠防治 | Babi Pest Control</title>
+  <meta name="description" content="Babi Pest Control 提供專業老鼠滅蟲服務，安全有效，20年經驗，24小時緊急處理。免費上門檢查報價，立即聯絡我們解決老鼠問題！">
+  <meta name="keywords" content="老鼠滅蟲, 香港老鼠防治, 專業滅鼠, 緊急滅鼠, 滅鼠公司, 免費報價">
+  <link rel="canonical" href="https://pest-sigma.vercel.app/rat-control.html">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
   
@@ -97,43 +98,265 @@
   </script>
 </head>
 <body>
-  <!-- Navigation -->
-  <header>
-    <nav class="main-nav">
-      <a href="index.html" class="logo">Babi Pest Control <span>百比除蟲</span></a>
-      <ul>
-        <li><a href="index.html">主頁</a></li>
-        <li><a href="pest-control-services.html">滅蟲服務</a></li>
-        <li><a href="online-shop.html">網上商店</a></li>
-        <li><a href="contact.html">聯絡我們</a></li>
-      </ul>
+    <!-- Skip to content link -->
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="index.html" aria-label="Babi Pest Control Homepage">
+                        <h1>Babi Pest Control</h1>
+                        <span class="logo-subtitle">百比除蟲 - 專業綠色滅蟲專家</span>
+                    </a>
+                </div>
+                <div class="header-actions">
+                    <div class="contact-info">
+                        <div class="phone-number">
+                            <i class="fas fa-phone" aria-hidden="true"></i>
+                            <a href="https://wa.me/85270173695" aria-label="Call us at +852-7017-3695">+852-7017-3695</a>
+                        </div>
+                        <div class="emergency-service">
+                            <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                            <span>24/7 緊急滅蟲服務</span>
+                        </div>
+                    </div>
+                    <div class="header-badges">
+                        <div class="language-switcher">
+                            <label for="language-select" class="sr-only">選擇語言</label>
+                            <select id="language-select" aria-label="選擇語言">
+                                <option value="zh">中文</option>
+                                <option value="en">English</option>
+                            </select>
+                        </div>
+                        <div class="gov-card-notice">
+                            <i class="fas fa-credit-card" aria-hidden="true"></i>
+                            <span>歡迎使用政府採購卡</span>
+                        </div>
+                        <div class="certification-badge">
+                            <i class="fas fa-certificate" aria-hidden="true"></i>
+                            <span>專業認證</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Navigation -->
+    <nav class="main-nav" role="navigation" aria-label="主要導航">
+        <div class="container">
+            <div class="nav-wrapper">
+                <button class="mobile-menu-toggle" aria-label="切換選單" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="index.html" role="menuitem">主頁</a></li>
+                    <li class="dropdown" role="none">
+                        <a href="about.html" role="menuitem" aria-haspopup="true" aria-expanded="false">
+                            關於我們 <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li role="none"><a href="about.html#company-profile" role="menuitem"><i class="fas fa-building"></i>公司簡介</a></li>
+                            <li role="none"><a href="about.html#professional-services" role="menuitem"><i class="fas fa-shield-alt"></i>專業滅蟲服務</a></li>
+                            <li role="none"><a href="about.html#certifications" role="menuitem"><i class="fas fa-certificate"></i>認證資格</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" role="none">
+                        <a href="disinfection-products.html" role="menuitem" aria-haspopup="true" aria-expanded="false">
+                            消毒產品 <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            <span class="menu-badge">熱門</span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li role="none"><a href="disinfection-products.html#personal-disinfection" role="menuitem"><i class="fas fa-user-shield"></i>個人消毒用品</a></li>
+                            <li role="none"><a href="disinfection-products.html#formaldehyde-removal" role="menuitem"><i class="fas fa-wind"></i>去甲醛噴霧</a></li>
+                            <li role="none"><a href="disinfection-products.html#antibacterial-products" role="menuitem"><i class="fas fa-bacteria"></i>抗菌產品</a></li>
+                            <li role="none"><a href="disinfection-products.html#disinfection-film" role="menuitem"><i class="fas fa-layer-group"></i>消毒膠膜</a></li>
+                            <li role="none"><a href="disinfection-products.html#disinfection-machines" role="menuitem"><i class="fas fa-cogs"></i>消毒機</a></li>
+                            <li role="none"><a href="disinfection-products.html#deodorants" role="menuitem"><i class="fas fa-spray-can"></i>除臭劑</a></li>
+                            <li role="none"><a href="disinfection-products.html#nebulizers" role="menuitem"><i class="fas fa-cloud"></i>霧化機</a></li>
+                            <li role="none"><a href="disinfection-products.html#cooling-fans" role="menuitem"><i class="fas fa-fan"></i>冷風機</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" role="none">
+                        <a href="pest-control-services.html" role="menuitem" aria-haspopup="true" aria-expanded="false">
+                            滅蟲服務 <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li role="none"><a href="pest-control-services.html#home-pest-control" role="menuitem"><i class="fas fa-home"></i>家居滅蟲</a></li>
+                            <li role="none"><a href="pest-control-services.html#commercial-pest-control" role="menuitem"><i class="fas fa-building"></i>商業滅蟲</a></li>
+                            <li role="none"><a href="pest-control-services.html#green-pest-control" role="menuitem"><i class="fas fa-leaf"></i>綠色滅蟲</a></li>
+                            <li role="none"><a href="pest-control-services.html#emergency-pest-control" role="menuitem"><i class="fas fa-bolt"></i>緊急滅蟲</a></li>
+                            <li role="none"><a href="pest-control-services.html#rat-control" role="menuitem"><i class="fas fa-mouse"></i>老鼠滅蟲</a></li>
+                            <li role="none"><a href="pest-control-services.html#cockroach-control" role="menuitem"><i class="fas fa-bug"></i>曱甴滅蟲</a></li>
+                            <li role="none"><a href="pest-control-services.html#mosquito-control" role="menuitem"><i class="fas fa-mosquito"></i>蚊滅蟲</a></li>
+                            <li role="none"><a href="pest-control-services.html#bedbug-control" role="menuitem"><i class="fas fa-bed"></i>床蝨滅蟲</a></li>
+                            <li role="none"><a href="pest-control-services.html#termite-control" role="menuitem"><i class="fas fa-bug"></i>白蟻防治</a></li>
+                            <li role="none"><a href="pest-control-services.html#ant-control" role="menuitem"><i class="fas fa-ant"></i>螞蟻防治</a></li>
+                        </ul>
+                    </li>
+                    <li role="none"><a href="honey-products.html" role="menuitem">蜜糖產品</a></li>
+                    <li role="none"><a href="nano-disinfection.html" role="menuitem">納米天然消毒</a></li>
+                    <li role="none"><a href="renovation-cleaning.html" role="menuitem">裝修後清潔</a></li>
+                    <li role="none"><a href="online-shop.html" role="menuitem">網上商店</a></li>
+                    <li role="none"><a href="contact.html" role="menuitem">聯絡我們</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
-  </header>
-  <main class="service-page">
-    <section class="hero">
-      <h1>老鼠滅蟲</h1>
-      <p>專業可靠的老鼠滅蟲服務，徹底解決老鼠問題。</p>
+    <main id="main-content">
+    <section class="service-hero">
+      <h1>老鼠滅蟲服務</h1>
+      <p>專業老鼠防治，安全有效，20年經驗，24小時緊急處理</p>
     </section>
-    <section class="service-info">
-      <h2>服務介紹</h2>
-      <p>我們提供專業的老鼠滅蟲服務，使用先進的技術和設備，徹底解決老鼠問題。</p>
+    <section class="service-content">
+      <h2>為什麼選擇我們的老鼠滅蟲服務？</h2>
       <ul>
-        <li>專業滅鼠技術</li>
-        <li>安全環保</li>
-        <li>24小時服務</li>
+        <li>專業團隊，經驗豐富</li>
+        <li>環保安全滅鼠方法</li>
+        <li>免費上門檢查及報價</li>
+        <li>24小時緊急服務</li>
+        <li>服務覆蓋全港</li>
       </ul>
+      <h2>服務流程</h2>
+      <ol>
+        <li>預約免費上門檢查</li>
+        <li>現場評估及報價</li>
+        <li>專業滅鼠處理</li>
+        <li>後續跟進及保養</li>
+      </ol>
+      <h2>香港鼠患現況與老鼠的危害</h2>
+      <p>近年來香港鼠患問題日益嚴重，人口密集、居住環境擠迫，加上鄰居衛生情況不佳，家居更容易受老鼠入侵。老鼠不僅會咬壞家具、電線，還會傳播多種疾病（如鉤端螺旋體病），甚至攜帶跳蚤、蟎蟲等次生害蟲，對家人健康構成威脅。</p>
+      <h2>老鼠的聰明與難纏</h2>
+      <p>老鼠屬囓齒類動物，聰明、記憶力強，能識別環境變化，對陷阱有高度警覺性。自行捉老鼠往往因方法不當而失敗，建議尋求專業滅鼠公司協助。</p>
+      <h2>香港常見老鼠種類</h2>
+      <ul>
+        <li><strong>溝鼠（褐家鼠）</strong>：體型最大，深棕色，常見於地底和渠道。</li>
+        <li><strong>小家鼠</strong>：體型小，繁殖快，常見於農地、建築物。</li>
+        <li><strong>家鼠（屋頂鼠）</strong>：耳朵長，善於攀爬，常見於天花、頂樓。</li>
+      </ul>
+      <h2>專業滅鼠方案</h2>
+      <ol>
+        <li>現場環境勘察，找出老鼠來源、路徑及數量。</li>
+        <li>杜絕老鼠來源，檢查門縫、管道、陽台等。</li>
+        <li>高效放置老鼠板，必要時使用老鼠藥（需專業評估）。</li>
+        <li>提供後續預防建議，減少再次入侵風險。</li>
+      </ol>
+      <h2>家居防鼠重點</h2>
+      <ul>
+        <li>清理家居及花園雜物，杜絕藏身之所。</li>
+        <li>垃圾密封處理，避免食物外露。</li>
+        <li>封閉老鼠出入口，特別是裝修後的牆身縫隙。</li>
+        <li>寵物食品、家中食物密封存放。</li>
+      </ul>
+      <h2>為什麼選擇專業滅鼠服務？</h2>
+      <ul>
+        <li>專業評估，找出老鼠來源和藏身處。</li>
+        <li>採用安全有效的滅鼠方法，保障家人健康。</li>
+        <li>提供後續預防建議，減少再次入侵風險。</li>
+        <li>24小時緊急服務，快速解決鼠患。</li>
+      </ul>
+      <p>如發現家中有老鼠跡象，請盡快<a href="contact.html">聯絡我們</a>，由專業團隊為你徹底解決鼠患。</p>
+      <h2>常見問題 (FAQ)</h2>
+      <div class="service-faq">
+        <h3>Q: 老鼠滅蟲服務收費如何？</h3>
+        <p>A: 我們提供免費上門檢查，根據現場情況報價，收費透明合理。</p>
+        <h3>Q: 滅鼠藥對人和寵物安全嗎？</h3>
+        <p>A: 我們選用環保低毒性藥劑，對人和寵物安全。</p>
+      </div>
+      <a href="contact.html" class="btn btn-primary">立即預約免費檢查</a>
+      <div class="related-services">
+        <h3>相關服務</h3>
+        <ul>
+          <li><a href="cockroach-control.html">曱甴滅蟲</a></li>
+          <li><a href="bedbug-control.html">床蝨滅蟲</a></li>
+          <li><a href="emergency-pest-control.html">緊急滅蟲</a></li>
+        </ul>
+      </div>
     </section>
-    <section class="cta">
-      <a href="contact.html" class="btn btn-primary">立即預約</a>
+    <!-- Blog Section: Proper Blog Grid -->
+    <section class="blog-section" id="latest-blog">
+        <div class="container">
+            <header class="section-header">
+                <h2>防蟲貼士</h2>
+                <p>最新文章與防蟲知識，助你守護家居健康</p>
+            </header>
+            <div class="blog-grid" style="display: flex; flex-wrap: wrap; gap: 32px; justify-content: center;">
+                <!-- Blog Post 1 -->
+                <article class="blog-preview" style="background: #fff; border-radius: 14px; box-shadow: 0 4px 16px rgba(76,175,80,0.08); padding: 28px 22px; max-width: 340px; flex: 1 1 300px; display: flex; flex-direction: column; justify-content: space-between;">
+                    <h3 style="color: #388e3c; font-size: 1.18rem; margin-bottom: 12px;">如何預防曱甴入屋？香港滅蟲專家教你5大方法</h3>
+                    <p style="color: #444; font-size: 1rem; margin-bottom: 18px;">曱甴（蟑螂）是香港常見的害蟲之一，牠們不僅影響家居衛生，還可能傳播疾病。本文教你5個有效預防曱甴入屋的方法。</p>
+                    <a href="blog/how-to-prevent-cockroaches.html" class="btn btn-primary" style="align-self: flex-start;">閱讀更多</a>
+                </article>
+                <!-- Blog Post 2 (Placeholder) -->
+                <article class="blog-preview" style="background: #fff; border-radius: 14px; box-shadow: 0 4px 16px rgba(76,175,80,0.08); padding: 28px 22px; max-width: 340px; flex: 1 1 300px; display: flex; flex-direction: column; justify-content: space-between;">
+                    <h3 style="color: #388e3c; font-size: 1.18rem; margin-bottom: 12px;">老鼠防治全攻略：家居防鼠必學技巧</h3>
+                    <p style="color: #444; font-size: 1rem; margin-bottom: 18px;">想有效預防老鼠入屋？本文將介紹家居防鼠的實用技巧與專業建議，助你遠離鼠患困擾。</p>
+                    <a href="#" class="btn btn-primary" style="align-self: flex-start;">即將推出</a>
+                </article>
+            </div>
+        </div>
     </section>
-  </main>
-  <footer>
-    <div class="footer-links">
-      <a href="privacy-policy.html">私隱政策</a> |
-      <a href="terms-of-service.html">服務條款</a> |
-      <a href="sitemap.html">網站地圖</a>
+    </main>
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Babi Pest Control</h4>
+                    <p>香港專業綠色滅蟲服務專家，20年經驗，環保安全，專業可靠。</p>
+                    <div class="footer-badges">
+                        <span class="badge">專業認證</span>
+                        <span class="badge">環保認證</span>
+                        <span class="badge">專業滅蟲</span>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>專業滅蟲服務</h4>
+                    <ul>
+                        <li><a href="#home-pest-control">家居滅蟲</a></li>
+                        <li><a href="#commercial-pest-control">商業滅蟲</a></li>
+                        <li><a href="#green-pest-control">綠色滅蟲</a></li>
+                        <li><a href="#emergency-pest-control">緊急滅蟲</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>害蟲控制服務</h4>
+                    <ul>
+                        <li><a href="#rat-control">老鼠滅蟲</a></li>
+                        <li><a href="#cockroach-control">曱甴滅蟲</a></li>
+                        <li><a href="#mosquito-control">蚊滅蟲</a></li>
+                        <li><a href="#bedbug-control">床蝨滅蟲</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>聯絡資訊</h4>
+                    <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="https://wa.me/85270173695">+852-7017-3695</a></p>
+                    <p><i class="fas fa-envelope" aria-hidden="true"></i> info@drpestcontrol.com</p>
+                    <p><i class="fas fa-clock" aria-hidden="true"></i> 24/7 緊急服務</p>
+                    <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 香港專業滅蟲服務</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Babi Pest Control. 版權所有。香港專業綠色滅蟲服務專家。</p>
+                <div class="footer-links">
+                    <a href="#privacy-policy">私隱政策</a>
+                    <a href="#terms-of-service">服務條款</a>
+                    <a href="#sitemap">網站地圖</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Floating Action Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/85270173695" class="floating-button whatsapp-button" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <button class="floating-button scroll-top-button" aria-label="Scroll to top">
+            <i class="fas fa-chevron-up"></i>
+        </button>
     </div>
-    <div class="copyright">&copy; 2024 Babi Pest Control 百比除蟲</div>
-  </footer>
+    <script src="script.js"></script>
 </body>
 </html> 
