@@ -575,4 +575,165 @@ function updateCartCount() {
 }
 
 // Initialize cart count on page load
-document.addEventListener('DOMContentLoaded', updateCartCount); 
+document.addEventListener('DOMContentLoaded', updateCartCount);
+
+// WhatsApp function to open with structured questions
+function openWhatsAppWithQuestions() {
+    if (typeof whatsappService !== 'undefined') {
+        whatsappService.openWhatsAppWelcome();
+    } else {
+        // Fallback to direct WhatsApp link if service not available
+        window.open('https://wa.me/85270173695?text=您好！我想了解Babi Pest Control的服務。', '_blank');
+    }
+}
+
+// WhatsApp Service Integration
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if WhatsApp service is available
+    if (typeof whatsappService !== 'undefined') {
+        // Add WhatsApp service buttons to contact sections
+        const contactSections = document.querySelectorAll('.contact-section, .cta-section, .call-to-action');
+        contactSections.forEach(section => {
+            const whatsappBtn = document.createElement('button');
+            whatsappBtn.className = 'btn btn-whatsapp';
+            whatsappBtn.innerHTML = '<i class="fab fa-whatsapp"></i> WhatsApp 諮詢';
+            whatsappBtn.style.cssText = `
+                background: linear-gradient(135deg, #25d366, #128c7e);
+                color: white;
+                border: none;
+                padding: 12px 24px;
+                border-radius: 25px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                margin: 10px 5px;
+            `;
+            
+            whatsappBtn.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+                this.style.boxShadow = '0 5px 15px rgba(37, 211, 102, 0.3)';
+            });
+            
+            whatsappBtn.addEventListener('mouseleave', function() {
+                this.style.transform = '';
+                this.style.boxShadow = '';
+            });
+            
+            whatsappBtn.addEventListener('click', function() {
+                whatsappService.openWhatsAppWelcome();
+            });
+            
+            // Add to existing button groups
+            const buttonGroup = section.querySelector('.btn-group, .cta-buttons, .cta-buttons');
+            if (buttonGroup) {
+                buttonGroup.appendChild(whatsappBtn);
+            } else {
+                section.appendChild(whatsappBtn);
+            }
+        });
+
+        // Add WhatsApp service to service cards
+        const serviceCards = document.querySelectorAll('.service-card, .pest-service-card, .service-item');
+        serviceCards.forEach(card => {
+            const serviceType = card.dataset.service || card.dataset.type || 'direct-contact';
+            
+            const whatsappBtn = document.createElement('button');
+            whatsappBtn.className = 'btn btn-whatsapp-small';
+            whatsappBtn.innerHTML = '<i class="fab fa-whatsapp"></i>';
+            whatsappBtn.title = 'WhatsApp 諮詢';
+            whatsappBtn.style.cssText = `
+                background: linear-gradient(135deg, #25d366, #128c7e);
+                color: white;
+                border: none;
+                padding: 8px 12px;
+                border-radius: 50%;
+                font-size: 14px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                z-index: 10;
+            `;
+            
+            whatsappBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                whatsappService.openWhatsAppWithService(serviceType);
+            });
+            
+            // Make sure card has relative positioning
+            if (getComputedStyle(card).position === 'static') {
+                card.style.position = 'relative';
+            }
+            
+            card.appendChild(whatsappBtn);
+        });
+
+        // Add WhatsApp service to blog posts
+        const blogPosts = document.querySelectorAll('.blog-post, .post-content');
+        blogPosts.forEach(post => {
+            const whatsappBtn = document.createElement('button');
+            whatsappBtn.className = 'btn btn-whatsapp-blog';
+            whatsappBtn.innerHTML = '<i class="fab fa-whatsapp"></i> WhatsApp 諮詢';
+            whatsappBtn.style.cssText = `
+                background: linear-gradient(135deg, #25d366, #128c7e);
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 20px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                margin: 10px 5px;
+                font-size: 14px;
+            `;
+            
+            whatsappBtn.addEventListener('click', function() {
+                whatsappService.openWhatsAppWelcome();
+            });
+            
+            const ctaSection = post.querySelector('.call-to-action, .cta-section');
+            if (ctaSection) {
+                ctaSection.appendChild(whatsappBtn);
+            }
+        });
+
+        // Add WhatsApp service to floating action buttons
+        const fabContainer = document.querySelector('.fab-container');
+        if (fabContainer) {
+            const whatsappFab = document.createElement('a');
+            whatsappFab.href = '#';
+            whatsappFab.className = 'fab fab-whatsapp';
+            whatsappFab.innerHTML = '<i class="fab fa-whatsapp"></i>';
+            whatsappFab.setAttribute('aria-label', 'WhatsApp 諮詢');
+            whatsappFab.addEventListener('click', function(e) {
+                e.preventDefault();
+                whatsappService.openWhatsAppWelcome();
+            });
+            
+            fabContainer.appendChild(whatsappFab);
+        }
+
+        // Add WhatsApp service to header contact info
+        const headerContact = document.querySelector('.contact-info .phone-number');
+        if (headerContact) {
+            const whatsappLink = document.createElement('a');
+            whatsappLink.href = '#';
+            whatsappLink.innerHTML = '<i class="fab fa-whatsapp"></i> WhatsApp';
+            whatsappLink.style.cssText = `
+                color: #25d366;
+                text-decoration: none;
+                font-weight: 600;
+                margin-left: 15px;
+            `;
+            
+            whatsappLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                whatsappService.openWhatsAppWelcome();
+            });
+            
+            headerContact.appendChild(whatsappLink);
+        }
+    }
+}); 

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp 客戶服務 | Babi Pest Control</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .whatsapp-interface {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        .whatsapp-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: white;
+            border-radius: 15px;
+        }
+
+        .whatsapp-header h1 {
+            margin: 0;
+            font-size: 2em;
+            font-weight: 700;
+        }
+
+        .whatsapp-header p {
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .service-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            border-color: #25d366;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.2);
+        }
+
+        .service-card.selected {
+            border-color: #25d366;
+            background: linear-gradient(135deg, #f0fff4, #e6fffa);
+        }
+
+        .service-emoji {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .service-name {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .service-description {
+            font-size: 0.9em;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .whatsapp-actions {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp-btn.emergency {
+            background: linear-gradient(135deg, #ff4757, #ff3742);
+        }
+
+        .whatsapp-btn.quote {
+            background: linear-gradient(135deg, #2ed573, #1e90ff);
+        }
+
+        .whatsapp-btn.direct {
+            background: linear-gradient(135deg, #5352ed, #3742fa);
+        }
+
+        .service-info {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .service-info.active {
+            display: block;
+        }
+
+        .service-info h3 {
+            color: #333;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .service-questions {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 15px;
+        }
+
+        .question-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #25d366;
+        }
+
+        .question-text {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .question-options {
+            color: #666;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 15px;
+        }
+
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-item i {
+            font-size: 1.2em;
+        }
+
+        @media (max-width: 768px) {
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-details {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="whatsapp-interface">
+        <div class="whatsapp-header">
+            <h1><i class="fab fa-whatsapp"></i> WhatsApp 客戶服務</h1>
+            <p>選擇您需要的服務，我們會立即為您安排專業服務</p>
+        </div>
+
+        <div class="service-grid">
+            <div class="service-card" data-service="rat-control">
+                <div class="service-emoji">🐭</div>
+                <div class="service-name">老鼠防治服務</div>
+                <div class="service-description">專業滅鼠方案，預防老鼠入侵，安全環保處理</div>
+            </div>
+
+            <div class="service-card" data-service="cockroach-control">
+                <div class="service-emoji">🪳</div>
+                <div class="service-name">蟑螂防治服務</div>
+                <div class="service-description">全面蟑螂清除，預防蟑螂滋生，長期防治方案</div>
+            </div>
+
+            <div class="service-card" data-service="mosquito-control">
+                <div class="service-emoji">🦟</div>
+                <div class="service-name">蚊蟲防治服務</div>
+                <div class="service-description">蚊蟲預防處理，戶外蚊蟲控制，室內蚊蟲防治</div>
+            </div>
+
+            <div class="service-card" data-service="termite-control">
+                <div class="service-emoji">🐜</div>
+                <div class="service-name">白蟻防治服務</div>
+                <div class="service-description">白蟻檢測服務，專業白蟻處理，結構保護方案</div>
+            </div>
+
+            <div class="service-card" data-service="bedbug-control">
+                <div class="service-emoji">🛏️</div>
+                <div class="service-name">床蝨防治服務</div>
+                <div class="service-description">床蝨檢測服務，專業床蝨處理，預防床蝨滋生</div>
+            </div>
+
+            <div class="service-card" data-service="ant-control">
+                <div class="service-emoji">🐜</div>
+                <div class="service-name">螞蟻防治服務</div>
+                <div class="service-description">螞蟻清除服務，預防螞蟻入侵，環保處理方案</div>
+            </div>
+
+            <div class="service-card" data-service="fly-control">
+                <div class="service-emoji">🪰</div>
+                <div class="service-name">蒼蠅防治服務</div>
+                <div class="service-description">商業場所蒼蠅控制，家居蒼蠅防治，專業蒼蠅處理</div>
+            </div>
+
+            <div class="service-card" data-service="home-pest-control">
+                <div class="service-emoji">🏠</div>
+                <div class="service-name">家居滅蟲服務</div>
+                <div class="service-description">全面家居滅蟲，環保安全處理，長期防治方案</div>
+            </div>
+
+            <div class="service-card" data-service="commercial-pest-control">
+                <div class="service-emoji">🏢</div>
+                <div class="service-name">商業滅蟲服務</div>
+                <div class="service-description">商業場所滅蟲，符合食品安全標準，專業商業滅蟲</div>
+            </div>
+
+            <div class="service-card" data-service="emergency-pest-control">
+                <div class="service-emoji">🚨</div>
+                <div class="service-name">緊急滅蟲服務</div>
+                <div class="service-description">24/7緊急服務，即時處理方案，緊急滅蟲專家</div>
+            </div>
+
+            <div class="service-card" data-service="cleaning-services">
+                <div class="service-emoji">🧹</div>
+                <div class="service-name">清潔服務</div>
+                <div class="service-description">家居清潔服務，辦公室清潔，裝修後清潔</div>
+            </div>
+
+            <div class="service-card" data-service="disinfection-services">
+                <div class="service-emoji">🧼</div>
+                <div class="service-name">消毒服務</div>
+                <div class="service-description">專業消毒服務，納米天然消毒，甲醛去除服務</div>
+            </div>
+
+            <div class="service-card" data-service="cost-inquiry">
+                <div class="service-emoji">💰</div>
+                <div class="service-name">服務收費查詢</div>
+                <div class="service-description">透明收費標準，免費現場評估，客製化報價</div>
+            </div>
+
+            <div class="service-card" data-service="free-quote">
+                <div class="service-emoji">📋</div>
+                <div class="service-name">免費報價</div>
+                <div class="service-description">免費現場評估，客製化防治方案，透明收費標準</div>
+            </div>
+
+            <div class="service-card" data-service="direct-contact">
+                <div class="service-emoji">📞</div>
+                <div class="service-name">直接聯絡</div>
+                <div class="service-description">立即安排服務，專業諮詢，緊急處理</div>
+            </div>
+        </div>
+
+        <div class="service-info" id="serviceInfo">
+            <h3><i class="fas fa-info-circle"></i> 服務詳情</h3>
+            <div class="service-questions" id="serviceQuestions">
+                <!-- Questions will be populated here -->
+            </div>
+        </div>
+
+        <div class="whatsapp-actions">
+            <button class="whatsapp-btn" onclick="openWhatsAppWelcome()">
+                <i class="fab fa-whatsapp"></i>
+                開始 WhatsApp 對話
+            </button>
+            
+            <button class="whatsapp-btn emergency" onclick="openWhatsAppEmergency()">
+                <i class="fas fa-exclamation-triangle"></i>
+                緊急服務
+            </button>
+            
+            <button class="whatsapp-btn quote" onclick="openWhatsAppQuote()">
+                <i class="fas fa-calculator"></i>
+                免費報價
+            </button>
+            
+            <button class="whatsapp-btn direct" onclick="openWhatsAppDirect()">
+                <i class="fas fa-phone"></i>
+                直接聯絡
+            </button>
+        </div>
+
+        <div class="contact-info">
+            <h3><i class="fas fa-headset"></i> 聯絡資訊</h3>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+852-7017-3695</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <span>24/7 緊急服務</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-certificate"></i>
+                    <span>專業認證服務</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>政府認可服務</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="whatsapp-service.js"></script>
+    <script>
+        // Service card selection
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('click', function() {
+                // Remove previous selection
+                document.querySelectorAll('.service-card').forEach(c => c.classList.remove('selected'));
+                
+                // Add selection to current card
+                this.classList.add('selected');
+                
+                // Show service info
+                const serviceKey = this.dataset.service;
+                showServiceInfo(serviceKey);
+            });
+        });
+
+        function showServiceInfo(serviceKey) {
+            const serviceInfo = document.getElementById('serviceInfo');
+            const serviceQuestions = document.getElementById('serviceQuestions');
+            
+            if (serviceKey && whatsappService.serviceCategories[serviceKey]) {
+                const service = whatsappService.serviceCategories[serviceKey];
+                const questions = service.questions;
+                
+                let questionsHtml = '';
+                questions.forEach(question => {
+                    questionsHtml += `
+                        <div class="question-item">
+                            <div class="question-text">${question}</div>
+                        </div>
+                    `;
+                });
+                
+                serviceQuestions.innerHTML = questionsHtml;
+                serviceInfo.classList.add('active');
+                
+                // Scroll to service info
+                serviceInfo.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function openWhatsAppWelcome() {
+            whatsappService.openWhatsAppWelcome();
+        }
+
+        function openWhatsAppEmergency() {
+            whatsappService.openWhatsAppEmergency();
+        }
+
+        function openWhatsAppQuote() {
+            whatsappService.openWhatsAppQuote();
+        }
+
+        function openWhatsAppDirect() {
+            const selectedService = document.querySelector('.service-card.selected');
+            if (selectedService) {
+                const serviceKey = selectedService.dataset.service;
+                whatsappService.openWhatsAppWithService(serviceKey);
+            } else {
+                whatsappService.openWhatsApp('您好！我想了解 Babi Pest Control 的服務。');
+            }
+        }
+
+        // Auto-select first service on load
+        document.addEventListener('DOMContentLoaded', function() {
+            const firstCard = document.querySelector('.service-card');
+            if (firstCard) {
+                firstCard.click();
+            }
+        });
+    </script>
+</body>
+</html> 

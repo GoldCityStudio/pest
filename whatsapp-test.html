@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Test | Babi Pest Control</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .test-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .test-button {
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .test-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+        }
+        
+        .test-info {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1><i class="fab fa-whatsapp"></i> WhatsApp 功能測試</h1>
+        <p>測試 WhatsApp 結構化問題功能</p>
+        
+        <div class="test-info">
+            <h3>測試說明：</h3>
+            <ul>
+                <li>點擊下方按鈕會打開 WhatsApp</li>
+                <li>會顯示結構化的服務選單</li>
+                <li>包含 15 個服務類別</li>
+                <li>每個服務都有特定的問題清單</li>
+            </ul>
+        </div>
+        
+        <button class="test-button" onclick="openWhatsAppWithQuestions()">
+            <i class="fab fa-whatsapp"></i> 測試 WhatsApp 功能
+        </button>
+        
+        <button class="test-button" onclick="testEmergencyService()">
+            <i class="fas fa-exclamation-triangle"></i> 測試緊急服務
+        </button>
+        
+        <button class="test-button" onclick="testQuoteService()">
+            <i class="fas fa-calculator"></i> 測試免費報價
+        </button>
+        
+        <div class="test-info">
+            <h3>預期結果：</h3>
+            <p>WhatsApp 會打開並顯示以下內容：</p>
+            <ol>
+                <li>歡迎訊息</li>
+                <li>15 個服務選項（1️⃣-1️⃣5️⃣）</li>
+                <li>每個選項都有對應的問題清單</li>
+                <li>專業的服務承諾</li>
+            </ol>
+        </div>
+    </div>
+
+    <script src="whatsapp-service.js"></script>
+    <script>
+        function openWhatsAppWithQuestions() {
+            if (typeof whatsappService !== 'undefined') {
+                whatsappService.openWhatsAppWelcome();
+            } else {
+                alert('WhatsApp 服務未載入，請檢查 whatsapp-service.js 檔案');
+            }
+        }
+        
+        function testEmergencyService() {
+            if (typeof whatsappService !== 'undefined') {
+                whatsappService.openWhatsAppEmergency();
+            } else {
+                alert('WhatsApp 服務未載入');
+            }
+        }
+        
+        function testQuoteService() {
+            if (typeof whatsappService !== 'undefined') {
+                whatsappService.openWhatsAppQuote();
+            } else {
+                alert('WhatsApp 服務未載入');
+            }
+        }
+        
+        // Test if WhatsApp service is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof whatsappService !== 'undefined') {
+                console.log('WhatsApp 服務已載入');
+                console.log('服務類別數量:', Object.keys(whatsappService.serviceCategories).length);
+            } else {
+                console.error('WhatsApp 服務未載入');
+            }
+        });
+    </script>
+</body>
+</html> 
