@@ -1,6 +1,6 @@
-# Dr Pest Control Company Website
+# Babi Pest Control Company Website
 
-A modern, responsive website for Dr Pest Control Company Ltd, a Hong Kong-based professional pest control service provider. This website replicates the design and functionality of the original site at https://drpest-hk.com/.
+A modern, responsive website for Babi Pest Control Company Ltd, a Hong Kong-based professional pest control service provider. This website replicates the design and functionality of the original site at https://babipestcontrol.com/.
 
 ## 📊 SEO Keyword Progress Summary
 
@@ -430,7 +430,7 @@ Replace placeholder images with actual product and company photos:
 
 ## License
 
-This project is created for educational and demonstration purposes. The design and content are based on the original Dr Pest Control Company website.
+This project is created for educational and demonstration purposes. The design and content are based on the original Babi Pest Control Company website.
 
 ## Support
 

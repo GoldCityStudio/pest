@@ -1,5 +1,5 @@
-// Service Worker for Dr Pest Control Website
-const CACHE_NAME = 'dr-pest-control-v1';
+// Service Worker for Babi Pest Control Website
+const CACHE_NAME = 'babi-pest-control-v1';
 const urlsToCache = [
   '/',
   '/index.html',
